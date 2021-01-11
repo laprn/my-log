@@ -85,5 +85,5 @@ if __name__ == '__main__':
     url_and_title = {}
     title = date.today().strftime('%Y-%m-%d')
     dt_now = datetime.now().isoformat()
-    driver = webdriver.Chrome(os.environ['DRIVER_PATH'])
+    driver = webdriver.Chrome()
     main(title, dt_now)

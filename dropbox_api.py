@@ -1,8 +1,8 @@
 import dropbox
-import config
+import os
 
 def download_file():
-    dbx = dropbox.Dropbox(config.TOKEN)
+    dbx = dropbox.Dropbox(os.environ['TOKEN'])
     api_result = dbx.files_download('/url.txt')[1].text
     format_result = api_result.splitlines()
     return format_result
